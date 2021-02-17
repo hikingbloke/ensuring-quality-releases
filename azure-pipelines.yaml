@@ -40,7 +40,7 @@ stages:
   - deployment: FakeRestAPI
     pool:
       vmImage: 'Ubuntu-16.04'
-    environment: 'TEST'
+    environment: 'ensurequalityrelease'
     strategy:
       runOnce:
         deploy:
@@ -53,9 +53,9 @@ stages:
               appType: webApp
               package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
   - deployment: VMDeploy
-    displayName: Test
+    displayName: TestEnvrionement
     environment:
-      name:  TEST
+      name:  ensurequalityrelease
       resourceType: VirtualMachine
     strategy:
       runOnce:
