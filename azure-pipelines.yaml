@@ -1,7 +1,7 @@
 name: Azure Pipelines
 variables:
   python.version: '3.7.6'
-  azureServiceConnectionId: 'ef5a7969-b97b-445e-ac5e-5edf463b725c'
+  azureServiceConnectionId: 'devOpsSub'
 stages:
 - stage: Build
   jobs:
