@@ -24,12 +24,6 @@ stages:
     - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-fakerestapi.zip
       displayName: 'Upload Package'
       artifact: drop-fakerestapi
-- stage: Build
-  jobs:
-  - job: Build
-    pool:
-      name: Hosted Ubuntu 1604
-    steps:
     - task: CmdLine@2
       displayName: Install Newman
       inputs:
@@ -40,7 +34,7 @@ stages:
       continueOnError: true
       inputs:
         script: 'newman run'
-        workingDirectory: 'starter-code/automatedtesting/postman'    
+        workingDirectory: 'starter-code/automatedtesting/postman'      
 - stage:
   jobs:
   - deployment: FakeRestAPI
