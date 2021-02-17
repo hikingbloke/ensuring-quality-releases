@@ -56,7 +56,7 @@ stages:
   - deployment: VMDeploy
     displayName: TestEnvrionement
     environment:
-      name:  ensurequalityrelease
+      name:  VMenv
       resourceType: VirtualMachine
     strategy:
       runOnce:
