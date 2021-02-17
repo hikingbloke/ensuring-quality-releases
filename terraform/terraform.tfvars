@@ -6,7 +6,7 @@ tenant_id = "4a677cc7-2ca8-4555-a53d-984c4d213708"
 
 # Resource Group/Location
 location = "West US"
-resource_group = "rg-ensure-quality"
+resource_group = "rg-ensure-quality-tf"
 application_type = "Web"
 
 # Network
