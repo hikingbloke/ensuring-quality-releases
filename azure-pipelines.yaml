@@ -1,7 +1,7 @@
 name: Azure Pipelines
 variables:
   python.version: '3.7.6'
-  azureServiceConnectionId: 'ef5a7969-b97b-445e-ac5e-5edf463b725c'
+  azureServiceConnectionId: 'devOpsSub'
 stages:
 - stage: Build
   jobs:
@@ -10,11 +10,11 @@ stages:
       name: Hosted Ubuntu 1604
     steps:
     # Needed for Terraform VM deployment
-    - task: InstallSSHKey@0
-      inputs:
-        knownHostsEntry: '13.64.17.77'
-        sshPublicKey: 'AAAAB3NzaC1yc2EAAAABJQAAAQEAsgEzraKWgLp55iWkkBzGwmnI/mvukz0w2Vs00YpVTvAhPim7A2IELrSmCzX53+XIF9fDhuRl90Tqx2/XMWPz8KXEkAynXssGfFh5PDDUFT1IZ2byX1p4uZYtKrYDtzeqDcqGZ8HD5JRUfIFMqATta9Viph/CtHvfm3PZSpx1NlDQpwhpoDSA652c/K/NUktpjDNxYU3/ZSFuJxX73GC+/i1TGljjpWfZLpnoERLMVCq2+l5EOTuD5gdhjfTKJ2XGA/eWOz4fe2f/nXI3ef11vSYNedkJN3SiaVC90qDRFr0kVDCpBtMn64LcCeStutuj/DayBM3WUDSrDT5edAN4aQ=='
-        sshKeySecureFile: 'private.ppk'
+    # - task: InstallSSHKey@0
+    #   inputs:
+    #     knownHostsEntry: '13.64.17.77'
+    #     sshPublicKey: 'AAAAB3NzaC1yc2EAAAABJQAAAQEAsgEzraKWgLp55iWkkBzGwmnI/mvukz0w2Vs00YpVTvAhPim7A2IELrSmCzX53+XIF9fDhuRl90Tqx2/XMWPz8KXEkAynXssGfFh5PDDUFT1IZ2byX1p4uZYtKrYDtzeqDcqGZ8HD5JRUfIFMqATta9Viph/CtHvfm3PZSpx1NlDQpwhpoDSA652c/K/NUktpjDNxYU3/ZSFuJxX73GC+/i1TGljjpWfZLpnoERLMVCq2+l5EOTuD5gdhjfTKJ2XGA/eWOz4fe2f/nXI3ef11vSYNedkJN3SiaVC90qDRFr0kVDCpBtMn64LcCeStutuj/DayBM3WUDSrDT5edAN4aQ=='
+    #     sshKeySecureFile: 'private.ppk'
     - task: ArchiveFiles@2
       displayName: 'Archive FakeRestAPI'
       inputs:
@@ -56,7 +56,7 @@ stages:
   - deployment: VMDeploy
     displayName: TestEnvrionement
     environment:
-      name:  ensurequalityrelease
+      name:  VMenv
       resourceType: VirtualMachine
     strategy:
       runOnce:
