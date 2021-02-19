@@ -32,11 +32,25 @@ stages:
         script: 'sudo npm install -g newman'
         workingDirectory: $(System.DefaultWorkingDirectory)
     - task: CmdLine@2
-      displayName: Run Regression Tests
+      displayName: Run Regression Tests Starter API 
       continueOnError: true
       inputs:
         script: 'newman run StarterAPIs.json'
-        workingDirectory: './automatedtesting/postman'      
+        workingDirectory: './automatedtesting/postman' 
+    - task: Bash@3
+      displayName: "Run Postman tests"
+      inputs:
+          targetType: "inline"
+          workingDirectory: './automatedtesting/postman'
+          script: |
+            #! /bin/bash
+           
+            sudo apt-get upgrade -y
+            sudo npm install -g newman reporter
+            sudo rm -rf newman/*
+            
+            newman run RegressionTestSuite.json -e MyEnvironment.json --reporters cli,junit
+            newman run DataValidationTestSuite.json -e MyEnvironment.json --reporters cli,junit   
 - stage:
   jobs:
   - deployment: FakeRestAPI

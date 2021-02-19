@@ -1,0 +1,29 @@
+{
+	"id": "fbabbbe8-919b-4fa9-86ad-95916c3b3ca8",
+	"name": "My Environment",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://web-appservice.azurewebsites.net/api",
+			"enabled": true
+		},
+		{
+			"key": "title",
+			"value": "Hiking",
+			"enabled": true
+		},
+		{
+			"key": "duedate",
+			"value": "2021-02-19T11:53:27.345Z",
+			"enabled": true
+		},
+		{
+			"key": "completed",
+			"value": "true\n",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-02-19T10:09:33.278Z",
+	"_postman_exported_using": "Postman/8.0.6"
+}
