@@ -36,7 +36,7 @@
 			"response": []
 		},
 		{
-			"name": "Get Employee",
+			"name": "Get Activities",
 			"event": [
 				{
 					"listen": "test",
@@ -73,11 +73,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Successful response\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"success\");\r",
-							"});\r",
-							"var json = pm.response.json();\r",
-							"pm.environment.set(\"id\", json.data.id);"
+							"pm.test(\"Response Validation'\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Hiking\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
