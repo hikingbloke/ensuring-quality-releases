@@ -89,3 +89,16 @@ stages:
                 sudo apt-get install -y chromium-browser
                 pip3 install selenium
                 export PATH=$PATH:some/path
+          - task: ExtractFiles@1
+            inputs:
+              archiveFilePatterns: "$(Pipeline.Workspace)/drop-project/$(Build.BuildId)-project.zip"
+              destinationFolder: "$(Pipeline.Workspace)/project"
+              cleanDestinationFolder: true
+          - task: Bash@3
+            displayName: "Run Selenium tests"
+            inputs:
+              targetType: "inline"
+              script: |
+                #! /bin/bash
+                
+                python3 project/s/automatedtesting/selenium/functional-ui-testing.py
