@@ -2,7 +2,7 @@ name: Azure Pipelines
 variables:
   python.version: '3.7.6'
   azureSubscription: 'ca6bf114-878c-4d50-9b6b-b6f40d07ea0d'
-  azureServiceConnectionId: 'serviceconnection-devops'
+  azureServiceConnectionId: 'Web-AppService'
 stages:
 - stage: Build
   jobs:
