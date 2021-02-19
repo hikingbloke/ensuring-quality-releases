@@ -50,7 +50,19 @@ stages:
             sudo rm -rf newman/*
             
             newman run RegressionTestSuite.json -e MyEnvironment.json --reporters cli,junit
-            newman run DataValidationTestSuite.json -e MyEnvironment.json --reporters cli,junit   
+            newman run DataValidationTestSuite.json -e MyEnvironment.json --reporters cli,junit
+
+    - task: ArchiveFiles@2
+      displayName: "Archive Project Solution"
+      inputs:
+        rootFolderOrFile: "./"
+        includeRootFolder: true
+        archiveType: "zip"
+        archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-project-solution.zip"
+    - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-project-solution.zip
+      displayName: "Upload Package"
+      artifact: drop-project-solution
+
 - stage:
   jobs:
   - deployment: FakeRestAPI
@@ -91,8 +103,8 @@ stages:
                 export PATH=$PATH:some/path
           - task: ExtractFiles@1
             inputs:
-              archiveFilePatterns: "$(Pipeline.Workspace)/drop-project/$(Build.BuildId)-project.zip"
-              destinationFolder: "$(Pipeline.Workspace)/project"
+              archiveFilePatterns: "$(Pipeline.Workspace)/drop-project-solution/$(Build.BuildId)-project-solution.zip"
+              destinationFolder: "$(Pipeline.Workspace)/project-solution"
               cleanDestinationFolder: true
           - task: Bash@3
             displayName: "Run Selenium tests"
