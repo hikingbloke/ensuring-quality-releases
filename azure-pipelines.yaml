@@ -57,7 +57,7 @@ stages:
   - deployment: VMDeploy
     displayName: TestEnvrionement
     environment:
-      name:  VMAzure
+      name:  VMDeploy
       resourceType: VirtualMachine
     strategy:
       runOnce:
