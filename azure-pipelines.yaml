@@ -1,7 +1,8 @@
 name: Azure Pipelines
 variables:
   python.version: '3.7.6'
-  azureServiceConnectionId: 'devOpsSub'
+  azureSubscription: 'ca6bf114-878c-4d50-9b6b-b6f40d07ea0d'
+  azureServiceConnectionId: 'Web-AppService'
 stages:
 - stage: Build
   jobs:
@@ -49,14 +50,14 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
-              appName: 'Web-AppService'
+              azureSubscription: $(azureSubscription)
+              appName: $(azureServiceConnectionId)
               appType: webApp
               package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
   - deployment: VMDeploy
     displayName: TestEnvrionement
     environment:
-      name:  VMenv
+      name:  VMDeploy
       resourceType: VirtualMachine
     strategy:
       runOnce:
