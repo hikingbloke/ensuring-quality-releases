@@ -1,7 +1,7 @@
 name: Azure Pipelines
 variables:
   python.version: '3.7.6'
-  azureSubscriptionId: 'ef5a7969-b97b-445e-ac5e-5edf463b725c'
+  azureSubscription: 'ca6bf114-878c-4d50-9b6b-b6f40d07ea0d'
   azureServiceConnectionId: 'serviceconnection-devops'
 stages:
 - stage: Build
@@ -50,7 +50,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App'
             inputs:
-              azureSubscription: $(azureSubscriptionId)
+              azureSubscription: $(azureSubscription)
               appName: $(azureServiceConnectionId)
               appType: webApp
               package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
