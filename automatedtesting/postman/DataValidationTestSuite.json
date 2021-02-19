@@ -73,8 +73,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Response Validation'\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"Hiking\");\r",
+							"pm.test(\"Successful response\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"success\");\r",
 							"});"
 						],
 						"type": "text/javascript"
