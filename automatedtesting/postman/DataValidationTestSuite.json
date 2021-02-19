@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get Employees",
+			"name": "Get Activities",
 			"event": [
 				{
 					"listen": "test",
@@ -24,13 +24,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/v1/employees",
+					"raw": "{{url}}/Activities",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"v1",
-						"employees"
+						"Activities"
 					]
 				}
 			},
@@ -55,21 +54,20 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/v1/employees/bipin",
+					"raw": "{{url}}/Activities/1",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"v1",
-						"employees",
-						"bipin"
+						"Activities",
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Add Employee",
+			"name": "Add Activity",
 			"event": [
 				{
 					"listen": "test",
@@ -90,7 +88,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"salary\": \"{{salary}}\",\r\n    \"age\": \"{{age}}\"\r\n}",
+					"raw": "{\r\n    \"Title\": \"{{title}}\",\r\n    \"DueDate\": \"{{duedate}}\",\r\n    \"Completed\": \"{{completed}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -98,13 +96,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/v1/create",
+					"raw": "{{url}}/Activities/",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"v1",
-						"create"
+						"Activities",
+						""
 					]
 				}
 			},
