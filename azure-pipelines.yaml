@@ -100,6 +100,7 @@ stages:
                 sudo apt-get install unzip -y
                 sudo apt-get install -y chromium-browser
                 pip3 install selenium
+                sudo npm install selenium-webdriver
                 export PATH=$PATH:some/path
           - task: ExtractFiles@1
             inputs:
@@ -112,5 +113,7 @@ stages:
               targetType: "inline"
               script: |
                 #! /bin/bash
+
+                npm notice created a lockfile as package-lock.json. You should commit this file.
                 
                 python3 "$(Pipeline.Workspace)/project-solution/s/automatedtesting/selenium/functional-ui-testing.py"
