@@ -108,7 +108,7 @@ stages:
                 cd /home/bipinsa
                 wget http://www.gtlib.gatech.edu/pub/apache/jmeter/binaries/apache-jmeter-5.4.1.tgz
                 tar xf apache-jmeter-5.4.1.tgz
-                sudo ln -s /home/bipinsa/apache-jmeter-5.4.1/bin/jmeter /usr/bin/jmeter
+                sudo ln -s -f /home/bipinsa/apache-jmeter-5.4.1/bin/jmeter /usr/bin/jmeter
 
           - task: ExtractFiles@1
             inputs:
