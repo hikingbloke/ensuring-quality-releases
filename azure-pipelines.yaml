@@ -98,8 +98,16 @@ stages:
                 sudo apt-get upgrade -y
                 sudo apt-get install python3-pip -y
                 sudo apt-get install unzip -y
+                
                 sudo apt-get install -y chromium-browser
-                sudo apt install default-jre -y
+
+                if test -f "usr/bin/java"
+                then
+                  echo "Skipping Java runtime as it is already installed"
+                else
+                  sudo apt install default-jre -y
+                fi
+
                 pip3 install selenium
                 sudo npm install selenium-webdriver
                 export PATH=$PATH:/usr/bin/chromium-browser
