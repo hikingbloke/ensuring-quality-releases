@@ -99,9 +99,17 @@ stages:
                 sudo apt-get install python3-pip -y
                 sudo apt-get install unzip -y
                 sudo apt-get install -y chromium-browser
+                sudo apt install default-jre -y
                 pip3 install selenium
                 sudo npm install selenium-webdriver
                 export PATH=$PATH:/usr/bin/chromium-browser
+
+                # Install jmeter
+                cd /home/azagent
+                wget http://www.gtlib.gatech.edu/pub/apache/jmeter/binaries/apache-jmeter-5.4.1.tgz
+                tar xf apache-jmeter-5.4.1.tgz
+                sudo ln -s /home/azagent/apache-jmeter-5.4.1/bin/jmeter /usr/bin/jmeter
+
           - task: ExtractFiles@1
             inputs:
               archiveFilePatterns: "$(Pipeline.Workspace)/drop-project-solution/$(Build.BuildId)-project-solution.zip"
@@ -117,3 +125,21 @@ stages:
                 npm notice created a lockfile as package-lock.json. You should commit this file.
                 
                 python3 "$(Pipeline.Workspace)/project-solution/s/automatedtesting/selenium/functional-ui-testing.py"
+          - task: Bash@3
+            displayName: "Run Jmeter tests"
+            inputs:
+              targetType: "inline"
+              script: |
+                #! /bin/bash
+                
+                cd "$(Pipeline.Workspace)/project-solution/s/automatedtesting/jmeter
+                
+                # Stress Tests
+                mkdir stress_test_report		  
+                rm -rf *.csv stress_test_report/*		  
+                jmeter -n -t StressTestSuite.jmx -l StressTestResults.csv -e -o stress_test_report/
+                
+                #Endurance Tests
+                mkdir endurance_test_report
+                rm -rf *.csv endurance_test_report/*		  
+                jmeter -n -t EnduranceTestSuite.jmx -l EnduranceTestResults.csv -e -o endurance_test_report/
