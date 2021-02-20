@@ -101,7 +101,7 @@ stages:
                 sudo apt-get install -y chromium-browser
                 pip3 install selenium
                 sudo npm install selenium-webdriver
-                export PATH=$PATH:/usr/bin/chromebrowser
+                export PATH=$PATH:/usr/bin/chromium-browser
           - task: ExtractFiles@1
             inputs:
               archiveFilePatterns: "$(Pipeline.Workspace)/drop-project-solution/$(Build.BuildId)-project-solution.zip"
