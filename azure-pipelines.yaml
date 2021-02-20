@@ -132,7 +132,7 @@ stages:
               script: |
                 #! /bin/bash
                 
-                cd "$(Pipeline.Workspace)/project-solution/s/automatedtesting/jmeter
+                cd "$(Pipeline.Workspace)/project-solution/s/automatedtesting/jmeter"
                 
                 # Stress Tests
                 mkdir stress_test_report		  
