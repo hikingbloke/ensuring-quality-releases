@@ -97,31 +97,19 @@ stages:
                 
                 sudo apt-get upgrade -y
                 sudo apt-get install python3-pip -y
-                sudo apt-get install unzip -y
-                
-                sudo apt-get install -y chromium-browser
-
-                if test -f "usr/bin/java"
-                then
-                  echo "Skipping Java runtime as it is already installed"
-                else
-                  sudo apt install default-jre -y
-                fi
+                sudo apt-get install unzip -y                
+                sudo apt-get install -y chromium-browser               
+                sudo apt install default-jre -y
 
                 pip3 install selenium
                 sudo npm install selenium-webdriver
                 export PATH=$PATH:/usr/bin/chromium-browser
 
                 # Install jmeter
-                if test -f "/usr/bin/jmeter"
-                then
-                  echo 'Jmeter already installed'
-                else
-                  cd /home/bipinsa
-                  wget http://www.gtlib.gatech.edu/pub/apache/jmeter/binaries/apache-jmeter-5.4.1.tgz
-                  tar xf apache-jmeter-5.4.1.tgz
-                  sudo ln -s -f /home/bipinsa/apache-jmeter-5.4.1/bin/jmeter /usr/bin/jmeter
-                fi
+                cd /home/bipinsa
+                wget http://www.gtlib.gatech.edu/pub/apache/jmeter/binaries/apache-jmeter-5.4.1.tgz
+                tar xf apache-jmeter-5.4.1.tgz
+                sudo ln -s -f /home/bipinsa/apache-jmeter-5.4.1/bin/jmeter /usr/bin/jmeter
 
           - task: ExtractFiles@1
             inputs:
