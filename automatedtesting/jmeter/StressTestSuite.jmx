@@ -133,7 +133,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\my-files\udacity\ensuring-quality-releases\automatedtesting\jmeter\StressTestResults.csv</stringProp>
+          <stringProp name="filename">StressTestResults.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
