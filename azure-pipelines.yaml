@@ -36,7 +36,7 @@ stages:
     - task: TerraformCLI@0
       displayName: 'Run terraform plan'
       inputs:
-        command: plan -out solution.plan
+        command: plan
         workingDirectory: $(terraformWorkingDirectory)
         environmentServiceName: $(azureSubscription)
         commandOptions: -var location=$(azureLocation)
