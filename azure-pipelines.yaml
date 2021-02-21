@@ -4,7 +4,7 @@ variables:
   azureSubscription: 'ca6bf114-878c-4d50-9b6b-b6f40d07ea0d'
   azureServiceConnectionId: 'Web-AppService'
   azureLocation: 'West US'
-  terraformWorkingDirectory:  './automatedtesting/terraform'
+  terraformWorkingDirectory:  './terraform'
   terraformVersion: '0.12.25'
 stages:
 - stage: Build
