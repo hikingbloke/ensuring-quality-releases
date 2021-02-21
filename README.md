@@ -64,7 +64,7 @@ https://github.com/hikingbloke/ensuring-quality-releases/tree/master/terraform/m
 ![screenshot - Terraform plan](./output_files/3_terraform_plan.png?raw=true)
 
 - Azure pipeline execution
-https://dev.azure.com/mytechstuffbipin/DevOps/_build/results?buildId=118&view=results
+https://dev.azure.com/mytechstuffbipin/DevOps/_build/results?buildId=156&view=results
 
 ![screenshot - Azure Pipeline Summary](./output_files/4_azure_pipeline-execution_1.png?raw=true)
 ![screenshot - Azure Pipeline Breakdown 1](./output_files/4_azure_pipeline-execution_2.png?raw=true)
