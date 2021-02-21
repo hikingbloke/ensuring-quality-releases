@@ -3,6 +3,9 @@ variables:
   python.version: '3.7.6'
   azureSubscription: 'ca6bf114-878c-4d50-9b6b-b6f40d07ea0d'
   azureServiceConnectionId: 'Web-AppService'
+  azureLocation: 'West US'
+  terraformWorkingDirectory:  './terraform'
+  terraformVersion: '0.14.7'
 stages:
 - stage: Build
   jobs:
@@ -16,6 +19,32 @@ stages:
         knownHostsEntry: 'AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=='
         sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDrI9HUIMN2FfgdGBXNePK37dQMZSLhBXEZTfaqmTVFBEn9O8KHoWthurJd4+OOxFemhQrG6kpo9KPL9hMQTkD3DpkfQ88V+UvLg/BimzxsIbz+EnLSj9QAtNaHkAiUjRMWPvbPp8ULZivSvxHanMedDSrsHb0UFs0oV+/DrddatSavQXS6Hgae4T62xMchl4Nj4SXgQ03jUtUjiIEOxWJCSIV4TDEvVeTW828jlykSabr9T/68dqaBQytJ6DX2czVdzAuFQTrrneWuQAdfzKn9gObQCd90n6j4wDotH0QGCqL85yFSKvoPPvaollWTlT2qyIUHBAbxpatkitwFnpFbD/iW8lAUKPORtArVQFaDdImsNy5Wv6IPhVqBAwbj1Yr0d+++JBPa4fHW2HWVhS9E38PJ/yjvVXUBQdw9L1S15SORsOy4i8c6XGiNxB3Og7qgxRLiBLCPbMAzLSDjYYSTdkq2zCwijruttL1p0xrlT1jYI/jGDdmSjrrNUtNui2M= bipin@DESKTOP-TKDUO55'
         sshKeySecureFile: 'devops'
+    - task: TerraformInstaller@0
+      displayName: 'Install Terraform'
+      inputs:
+        terraformVersion: $(terraformVersion)
+    - task: TerraformCLI@0
+      displayName: 'Run terraform init'
+      inputs:
+        command: init
+        workingDirectory: $(terraformWorkingDirectory)
+    - task: TerraformCLI@0
+      displayName: 'Run terraform validate'
+      inputs:
+        command: validate
+        workingDirectory: $(terraformWorkingDirectory)
+    - task: TerraformCLI@0
+      displayName: 'Run terraform plan'
+      inputs:
+        command: plan
+        workingDirectory: $(terraformWorkingDirectory)
+        environmentServiceName: $(azureSubscription)
+    - task: TerraformCLI@0
+      displayName: 'Apply terraform apply'
+      inputs:
+        command: apply
+        workingDirectory: $(terraformWorkingDirectory)
+        environmentServiceName: $(azureSubscription)
     - task: ArchiveFiles@2
       displayName: 'Archive FakeRestAPI'
       inputs:
