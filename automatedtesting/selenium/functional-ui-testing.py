@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from datetime import datetime
 import logging
 
-logging.basicConfig(filename="/var/customlogging.txt", 
+logging.basicConfig(filename="/home.bipinsa/customlogging.txt", 
                     format='%(asctime)s %(message)s', 
                     filemode='w') 
 
