@@ -27,7 +27,7 @@ stages:
       displayName: 'Run terraform init'
       inputs:
         command: init
-        workingDirectory: $(terraformWorkingDirectory)
+        workingDirectory: './terraform' 
     - task: TerraformCLI@0
       displayName: 'Run terraform validate'
       inputs:
