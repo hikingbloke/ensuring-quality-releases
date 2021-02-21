@@ -133,4 +133,4 @@ Screenshots of log analytics queries and result sets which will show specific ou
 ![screenshot - Log Analytics query 3](./output_files/9_log-analytics-query-webapplogs.png?raw=true)
 
 The result set will include the output of the execution of the Selenium Test Suite.
-![screenshot - Terraform plan](./output_files/4.web-app-deployed.png?raw=true)
+* currently facing diffcuts fot custom logs not showing for log analaytics to query *
