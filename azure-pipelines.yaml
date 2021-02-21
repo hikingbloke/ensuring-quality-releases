@@ -5,7 +5,7 @@ variables:
   azureServiceConnectionId: 'Web-AppService'
   azureLocation: 'West US'
   terraformWorkingDirectory:  './terraform'
-  terraformVersion: '0.12.25'
+  terraformVersion: '0.14.7'
 stages:
 - stage: Build
   jobs:
