@@ -34,14 +34,7 @@ stages:
         command: validate
         workingDirectory: $(terraformWorkingDirectory)
     - task: TerraformCLI@0
-      displayName: 'Run terraform plan'
-      inputs:
-        command: plan
-        workingDirectory: $(terraformWorkingDirectory)
-        environmentServiceName: $(azureSubscription)
-        commandOptions: -var location=$(azureLocation)
-    - task: TerraformCLI@0
-      displayName: 'Apply terraform plan'
+      displayName: 'Apply terraform apply'
       inputs:
         command: apply
         workingDirectory: $(terraformWorkingDirectory)
