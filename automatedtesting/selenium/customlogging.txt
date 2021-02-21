@@ -1,0 +1,197 @@
+2021-02-20 16:26:22,313 Start logging
+2021-02-20 16:26:22,863 POST http://127.0.0.1:55165/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}
+2021-02-20 16:26:22,864 Starting new HTTP connection (1): 127.0.0.1:55165
+2021-02-20 16:26:26,587 http://127.0.0.1:55165 "POST /session HTTP/1.1" 200 719
+2021-02-20 16:26:26,588 Finished Request
+2021-02-20 16:26:26,589 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/url {"url": "https://www.saucedemo.com/"}
+2021-02-20 16:26:29,165 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/url HTTP/1.1" 200 14
+2021-02-20 16:26:29,166 Finished Request
+2021-02-20 16:26:29,166 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element {"using": "css selector", "value": "[id=\"user-name\"]"}
+2021-02-20 16:26:29,178 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,178 Finished Request
+2021-02-20 16:26:29,178 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element {"using": "css selector", "value": "[id=\"password\"]"}
+2021-02-20 16:26:29,186 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,187 Finished Request
+2021-02-20 16:26:29,187 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/ce72e455-f5f3-4635-8428-db22280cd29b/value {"text": "standard_user", "value": ["s", "t", "a", "n", "d", "a", "r", "d", "_", "u", "s", "e", "r"], "id": "ce72e455-f5f3-4635-8428-db22280cd29b"}
+2021-02-20 16:26:29,244 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/ce72e455-f5f3-4635-8428-db22280cd29b/value HTTP/1.1" 200 14
+2021-02-20 16:26:29,244 Finished Request
+2021-02-20 16:26:29,244 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/ccc19502-aaf3-4412-b8fd-94e1af988bb4/value {"text": "secret_sauce\ue006", "value": ["s", "e", "c", "r", "e", "t", "_", "s", "a", "u", "c", "e", "\ue006"], "id": "ccc19502-aaf3-4412-b8fd-94e1af988bb4"}
+2021-02-20 16:26:29,702 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/ccc19502-aaf3-4412-b8fd-94e1af988bb4/value HTTP/1.1" 200 14
+2021-02-20 16:26:29,702 Finished Request
+2021-02-20 16:26:29,703 Logging success
+2021-02-20 16:26:29,703 user: standard_user
+2021-02-20 16:26:29,703 password: secret_sauce
+2021-02-20 16:26:29,703 Getting Inventory list
+2021-02-20 16:26:29,703 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/elements {"using": "css selector", "value": ".inventory_item"}
+2021-02-20 16:26:29,713 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/elements HTTP/1.1" 200 485
+2021-02-20 16:26:29,713 Finished Request
+2021-02-20 16:26:29,714 Adding all products to the cart
+2021-02-20 16:26:29,714 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/73f72bb5-7f64-4ece-a142-7f9943bfafa3/element {"using": "css selector", "value": ".inventory_item_name", "id": "73f72bb5-7f64-4ece-a142-7f9943bfafa3"}
+2021-02-20 16:26:29,725 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/73f72bb5-7f64-4ece-a142-7f9943bfafa3/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,725 Finished Request
+2021-02-20 16:26:29,725 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/c03f5791-1882-42f8-a72a-481744e4de26/text {"id": "c03f5791-1882-42f8-a72a-481744e4de26"}
+2021-02-20 16:26:29,736 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/c03f5791-1882-42f8-a72a-481744e4de26/text HTTP/1.1" 200 31
+2021-02-20 16:26:29,736 Finished Request
+2021-02-20 16:26:29,737 adding product to cart:Sauce Labs Backpack
+2021-02-20 16:26:29,737 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/73f72bb5-7f64-4ece-a142-7f9943bfafa3/element {"using": "css selector", "value": "button[class='btn_primary btn_inventory']", "id": "73f72bb5-7f64-4ece-a142-7f9943bfafa3"}
+2021-02-20 16:26:29,746 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/73f72bb5-7f64-4ece-a142-7f9943bfafa3/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,746 Finished Request
+2021-02-20 16:26:29,746 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/644df0e3-7932-4fbe-85f2-db99a2c6605e/click {"id": "644df0e3-7932-4fbe-85f2-db99a2c6605e"}
+2021-02-20 16:26:29,780 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/644df0e3-7932-4fbe-85f2-db99a2c6605e/click HTTP/1.1" 200 14
+2021-02-20 16:26:29,780 Finished Request
+2021-02-20 16:26:29,780 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/a82ffe38-ddab-4411-9f30-53b74bb98eb7/element {"using": "css selector", "value": ".inventory_item_name", "id": "a82ffe38-ddab-4411-9f30-53b74bb98eb7"}
+2021-02-20 16:26:29,788 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/a82ffe38-ddab-4411-9f30-53b74bb98eb7/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,788 Finished Request
+2021-02-20 16:26:29,788 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/322b48ee-58c5-4d1d-8974-1f8ab03814ef/text {"id": "322b48ee-58c5-4d1d-8974-1f8ab03814ef"}
+2021-02-20 16:26:29,797 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/322b48ee-58c5-4d1d-8974-1f8ab03814ef/text HTTP/1.1" 200 33
+2021-02-20 16:26:29,798 Finished Request
+2021-02-20 16:26:29,798 adding product to cart:Sauce Labs Bike Light
+2021-02-20 16:26:29,798 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/a82ffe38-ddab-4411-9f30-53b74bb98eb7/element {"using": "css selector", "value": "button[class='btn_primary btn_inventory']", "id": "a82ffe38-ddab-4411-9f30-53b74bb98eb7"}
+2021-02-20 16:26:29,808 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/a82ffe38-ddab-4411-9f30-53b74bb98eb7/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,808 Finished Request
+2021-02-20 16:26:29,808 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/1061e65f-cf90-4f1a-9868-e4107e74fac8/click {"id": "1061e65f-cf90-4f1a-9868-e4107e74fac8"}
+2021-02-20 16:26:29,835 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/1061e65f-cf90-4f1a-9868-e4107e74fac8/click HTTP/1.1" 200 14
+2021-02-20 16:26:29,835 Finished Request
+2021-02-20 16:26:29,836 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/38baf3f8-315e-41ac-8781-18c9d9e29885/element {"using": "css selector", "value": ".inventory_item_name", "id": "38baf3f8-315e-41ac-8781-18c9d9e29885"}
+2021-02-20 16:26:29,843 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/38baf3f8-315e-41ac-8781-18c9d9e29885/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,843 Finished Request
+2021-02-20 16:26:29,843 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/76101ec1-3af4-4050-86c8-718e45a03743/text {"id": "76101ec1-3af4-4050-86c8-718e45a03743"}
+2021-02-20 16:26:29,854 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/76101ec1-3af4-4050-86c8-718e45a03743/text HTTP/1.1" 200 35
+2021-02-20 16:26:29,854 Finished Request
+2021-02-20 16:26:29,855 adding product to cart:Sauce Labs Bolt T-Shirt
+2021-02-20 16:26:29,855 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/38baf3f8-315e-41ac-8781-18c9d9e29885/element {"using": "css selector", "value": "button[class='btn_primary btn_inventory']", "id": "38baf3f8-315e-41ac-8781-18c9d9e29885"}
+2021-02-20 16:26:29,863 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/38baf3f8-315e-41ac-8781-18c9d9e29885/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,863 Finished Request
+2021-02-20 16:26:29,863 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/387f9828-105b-4dd6-a20b-9813b4b47430/click {"id": "387f9828-105b-4dd6-a20b-9813b4b47430"}
+2021-02-20 16:26:29,892 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/387f9828-105b-4dd6-a20b-9813b4b47430/click HTTP/1.1" 200 14
+2021-02-20 16:26:29,893 Finished Request
+2021-02-20 16:26:29,893 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/b0c14b98-0634-421f-8727-2204bf8f1b69/element {"using": "css selector", "value": ".inventory_item_name", "id": "b0c14b98-0634-421f-8727-2204bf8f1b69"}
+2021-02-20 16:26:29,922 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/b0c14b98-0634-421f-8727-2204bf8f1b69/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,923 Finished Request
+2021-02-20 16:26:29,923 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/feeb2530-ea61-4a74-9d5a-46843864bb07/text {"id": "feeb2530-ea61-4a74-9d5a-46843864bb07"}
+2021-02-20 16:26:29,935 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/feeb2530-ea61-4a74-9d5a-46843864bb07/text HTTP/1.1" 200 36
+2021-02-20 16:26:29,935 Finished Request
+2021-02-20 16:26:29,936 adding product to cart:Sauce Labs Fleece Jacket
+2021-02-20 16:26:29,936 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/b0c14b98-0634-421f-8727-2204bf8f1b69/element {"using": "css selector", "value": "button[class='btn_primary btn_inventory']", "id": "b0c14b98-0634-421f-8727-2204bf8f1b69"}
+2021-02-20 16:26:29,944 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/b0c14b98-0634-421f-8727-2204bf8f1b69/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,944 Finished Request
+2021-02-20 16:26:29,944 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/48e7a793-99ae-41f2-891f-6419c0d64629/click {"id": "48e7a793-99ae-41f2-891f-6419c0d64629"}
+2021-02-20 16:26:29,974 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/48e7a793-99ae-41f2-891f-6419c0d64629/click HTTP/1.1" 200 14
+2021-02-20 16:26:29,974 Finished Request
+2021-02-20 16:26:29,975 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/5a646368-d770-42fb-805c-311116fab6d1/element {"using": "css selector", "value": ".inventory_item_name", "id": "5a646368-d770-42fb-805c-311116fab6d1"}
+2021-02-20 16:26:29,985 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/5a646368-d770-42fb-805c-311116fab6d1/element HTTP/1.1" 200 88
+2021-02-20 16:26:29,985 Finished Request
+2021-02-20 16:26:29,985 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/02bb151b-81b7-46ea-a9fc-750a9ba0c879/text {"id": "02bb151b-81b7-46ea-a9fc-750a9ba0c879"}
+2021-02-20 16:26:29,996 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/02bb151b-81b7-46ea-a9fc-750a9ba0c879/text HTTP/1.1" 200 29
+2021-02-20 16:26:29,996 Finished Request
+2021-02-20 16:26:29,996 adding product to cart:Sauce Labs Onesie
+2021-02-20 16:26:29,997 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/5a646368-d770-42fb-805c-311116fab6d1/element {"using": "css selector", "value": "button[class='btn_primary btn_inventory']", "id": "5a646368-d770-42fb-805c-311116fab6d1"}
+2021-02-20 16:26:30,004 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/5a646368-d770-42fb-805c-311116fab6d1/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,004 Finished Request
+2021-02-20 16:26:30,005 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/f9ecfcdb-a122-4cb0-9fcf-0532282d88de/click {"id": "f9ecfcdb-a122-4cb0-9fcf-0532282d88de"}
+2021-02-20 16:26:30,032 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/f9ecfcdb-a122-4cb0-9fcf-0532282d88de/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,032 Finished Request
+2021-02-20 16:26:30,032 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/a561c8bc-50b5-464b-bc50-345404a43f4a/element {"using": "css selector", "value": ".inventory_item_name", "id": "a561c8bc-50b5-464b-bc50-345404a43f4a"}
+2021-02-20 16:26:30,039 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/a561c8bc-50b5-464b-bc50-345404a43f4a/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,040 Finished Request
+2021-02-20 16:26:30,040 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/57720859-1601-474d-a7d0-fa019a4941cb/text {"id": "57720859-1601-474d-a7d0-fa019a4941cb"}
+2021-02-20 16:26:30,050 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/57720859-1601-474d-a7d0-fa019a4941cb/text HTTP/1.1" 200 45
+2021-02-20 16:26:30,051 Finished Request
+2021-02-20 16:26:30,051 adding product to cart:Test.allTheThings() T-Shirt (Red)
+2021-02-20 16:26:30,051 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/a561c8bc-50b5-464b-bc50-345404a43f4a/element {"using": "css selector", "value": "button[class='btn_primary btn_inventory']", "id": "a561c8bc-50b5-464b-bc50-345404a43f4a"}
+2021-02-20 16:26:30,060 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/a561c8bc-50b5-464b-bc50-345404a43f4a/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,061 Finished Request
+2021-02-20 16:26:30,061 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/a88c7df3-e5a8-422d-8fc2-0b4dc4d3491d/click {"id": "a88c7df3-e5a8-422d-8fc2-0b4dc4d3491d"}
+2021-02-20 16:26:30,085 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/a88c7df3-e5a8-422d-8fc2-0b4dc4d3491d/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,086 Finished Request
+2021-02-20 16:26:30,086 Go to cart container page
+2021-02-20 16:26:30,086 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element {"using": "css selector", "value": "a[class='shopping_cart_link fa-layers fa-fw']"}
+2021-02-20 16:26:30,094 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,094 Finished Request
+2021-02-20 16:26:30,094 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/c4fbcb54-7478-4851-bc51-1bbb4ed87bd3/click {"id": "c4fbcb54-7478-4851-bc51-1bbb4ed87bd3"}
+2021-02-20 16:26:30,269 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/c4fbcb54-7478-4851-bc51-1bbb4ed87bd3/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,269 Finished Request
+2021-02-20 16:26:30,270 Get all products in the cart
+2021-02-20 16:26:30,270 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/elements {"using": "css selector", "value": ".cart_item"}
+2021-02-20 16:26:30,282 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/elements HTTP/1.1" 200 485
+2021-02-20 16:26:30,282 Finished Request
+2021-02-20 16:26:30,283 Removing all products from the cart
+2021-02-20 16:26:30,283 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/3215857c-dc05-40ee-9cf9-42003f8fee12/element {"using": "css selector", "value": ".inventory_item_name", "id": "3215857c-dc05-40ee-9cf9-42003f8fee12"}
+2021-02-20 16:26:30,292 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/3215857c-dc05-40ee-9cf9-42003f8fee12/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,292 Finished Request
+2021-02-20 16:26:30,292 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/1321987d-34aa-4fbc-beea-c42c150dbb7d/text {"id": "1321987d-34aa-4fbc-beea-c42c150dbb7d"}
+2021-02-20 16:26:30,302 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/1321987d-34aa-4fbc-beea-c42c150dbb7d/text HTTP/1.1" 200 31
+2021-02-20 16:26:30,302 Finished Request
+2021-02-20 16:26:30,303 removing product from cart:Sauce Labs Backpack
+2021-02-20 16:26:30,303 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/3215857c-dc05-40ee-9cf9-42003f8fee12/element {"using": "css selector", "value": "button[class='btn_secondary cart_button']", "id": "3215857c-dc05-40ee-9cf9-42003f8fee12"}
+2021-02-20 16:26:30,312 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/3215857c-dc05-40ee-9cf9-42003f8fee12/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,312 Finished Request
+2021-02-20 16:26:30,313 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/73c91c43-e3e1-4071-b5aa-26b6fa944641/click {"id": "73c91c43-e3e1-4071-b5aa-26b6fa944641"}
+2021-02-20 16:26:30,345 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/73c91c43-e3e1-4071-b5aa-26b6fa944641/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,345 Finished Request
+2021-02-20 16:26:30,345 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/b58ef125-2df9-4b48-b80a-0480cfe1c4f9/element {"using": "css selector", "value": ".inventory_item_name", "id": "b58ef125-2df9-4b48-b80a-0480cfe1c4f9"}
+2021-02-20 16:26:30,353 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/b58ef125-2df9-4b48-b80a-0480cfe1c4f9/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,353 Finished Request
+2021-02-20 16:26:30,353 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/897c46ec-06a8-4b11-82b5-19b46b3cae35/text {"id": "897c46ec-06a8-4b11-82b5-19b46b3cae35"}
+2021-02-20 16:26:30,362 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/897c46ec-06a8-4b11-82b5-19b46b3cae35/text HTTP/1.1" 200 33
+2021-02-20 16:26:30,363 Finished Request
+2021-02-20 16:26:30,364 removing product from cart:Sauce Labs Bike Light
+2021-02-20 16:26:30,364 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/b58ef125-2df9-4b48-b80a-0480cfe1c4f9/element {"using": "css selector", "value": "button[class='btn_secondary cart_button']", "id": "b58ef125-2df9-4b48-b80a-0480cfe1c4f9"}
+2021-02-20 16:26:30,373 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/b58ef125-2df9-4b48-b80a-0480cfe1c4f9/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,373 Finished Request
+2021-02-20 16:26:30,373 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/c534e0d2-beb0-43e4-9c82-500e89ec13db/click {"id": "c534e0d2-beb0-43e4-9c82-500e89ec13db"}
+2021-02-20 16:26:30,399 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/c534e0d2-beb0-43e4-9c82-500e89ec13db/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,399 Finished Request
+2021-02-20 16:26:30,400 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/8728180c-3101-493d-ad2c-96e19857be3c/element {"using": "css selector", "value": ".inventory_item_name", "id": "8728180c-3101-493d-ad2c-96e19857be3c"}
+2021-02-20 16:26:30,407 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/8728180c-3101-493d-ad2c-96e19857be3c/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,407 Finished Request
+2021-02-20 16:26:30,407 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/75a99d1f-36e8-44e0-a64b-5a8012d02b5a/text {"id": "75a99d1f-36e8-44e0-a64b-5a8012d02b5a"}
+2021-02-20 16:26:30,418 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/75a99d1f-36e8-44e0-a64b-5a8012d02b5a/text HTTP/1.1" 200 35
+2021-02-20 16:26:30,419 Finished Request
+2021-02-20 16:26:30,420 removing product from cart:Sauce Labs Bolt T-Shirt
+2021-02-20 16:26:30,420 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/8728180c-3101-493d-ad2c-96e19857be3c/element {"using": "css selector", "value": "button[class='btn_secondary cart_button']", "id": "8728180c-3101-493d-ad2c-96e19857be3c"}
+2021-02-20 16:26:30,428 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/8728180c-3101-493d-ad2c-96e19857be3c/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,429 Finished Request
+2021-02-20 16:26:30,429 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/1c2a8834-0e0a-48c6-8659-5fa9de375dda/click {"id": "1c2a8834-0e0a-48c6-8659-5fa9de375dda"}
+2021-02-20 16:26:30,456 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/1c2a8834-0e0a-48c6-8659-5fa9de375dda/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,456 Finished Request
+2021-02-20 16:26:30,456 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/7a2bff25-342a-4c09-a82e-76e4662f362a/element {"using": "css selector", "value": ".inventory_item_name", "id": "7a2bff25-342a-4c09-a82e-76e4662f362a"}
+2021-02-20 16:26:30,468 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/7a2bff25-342a-4c09-a82e-76e4662f362a/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,468 Finished Request
+2021-02-20 16:26:30,468 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/e89abb40-27a4-4a18-95a5-191c5646fcae/text {"id": "e89abb40-27a4-4a18-95a5-191c5646fcae"}
+2021-02-20 16:26:30,479 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/e89abb40-27a4-4a18-95a5-191c5646fcae/text HTTP/1.1" 200 36
+2021-02-20 16:26:30,479 Finished Request
+2021-02-20 16:26:30,480 removing product from cart:Sauce Labs Fleece Jacket
+2021-02-20 16:26:30,480 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/7a2bff25-342a-4c09-a82e-76e4662f362a/element {"using": "css selector", "value": "button[class='btn_secondary cart_button']", "id": "7a2bff25-342a-4c09-a82e-76e4662f362a"}
+2021-02-20 16:26:30,488 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/7a2bff25-342a-4c09-a82e-76e4662f362a/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,488 Finished Request
+2021-02-20 16:26:30,488 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/8a544531-7530-45b1-95f9-a8ab16145b2f/click {"id": "8a544531-7530-45b1-95f9-a8ab16145b2f"}
+2021-02-20 16:26:30,516 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/8a544531-7530-45b1-95f9-a8ab16145b2f/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,516 Finished Request
+2021-02-20 16:26:30,516 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/4422f886-0dbf-4dbd-b367-96ce67e7e969/element {"using": "css selector", "value": ".inventory_item_name", "id": "4422f886-0dbf-4dbd-b367-96ce67e7e969"}
+2021-02-20 16:26:30,524 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/4422f886-0dbf-4dbd-b367-96ce67e7e969/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,524 Finished Request
+2021-02-20 16:26:30,524 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/90a0bcb6-8f08-4eb6-91a9-d260abd3d2f5/text {"id": "90a0bcb6-8f08-4eb6-91a9-d260abd3d2f5"}
+2021-02-20 16:26:30,534 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/90a0bcb6-8f08-4eb6-91a9-d260abd3d2f5/text HTTP/1.1" 200 29
+2021-02-20 16:26:30,535 Finished Request
+2021-02-20 16:26:30,535 removing product from cart:Sauce Labs Onesie
+2021-02-20 16:26:30,536 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/4422f886-0dbf-4dbd-b367-96ce67e7e969/element {"using": "css selector", "value": "button[class='btn_secondary cart_button']", "id": "4422f886-0dbf-4dbd-b367-96ce67e7e969"}
+2021-02-20 16:26:30,545 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/4422f886-0dbf-4dbd-b367-96ce67e7e969/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,545 Finished Request
+2021-02-20 16:26:30,545 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/aec2e2f8-c33a-4c73-b854-ef2a7a8d9249/click {"id": "aec2e2f8-c33a-4c73-b854-ef2a7a8d9249"}
+2021-02-20 16:26:30,571 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/aec2e2f8-c33a-4c73-b854-ef2a7a8d9249/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,571 Finished Request
+2021-02-20 16:26:30,571 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/38fa4dac-cd77-40bc-bbed-5c35598c9e84/element {"using": "css selector", "value": ".inventory_item_name", "id": "38fa4dac-cd77-40bc-bbed-5c35598c9e84"}
+2021-02-20 16:26:30,581 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/38fa4dac-cd77-40bc-bbed-5c35598c9e84/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,581 Finished Request
+2021-02-20 16:26:30,581 GET http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/50de9eca-a2a1-436d-82b4-001fbb6c4ef9/text {"id": "50de9eca-a2a1-436d-82b4-001fbb6c4ef9"}
+2021-02-20 16:26:30,594 http://127.0.0.1:55165 "GET /session/da0f4c28f73e858cf2ef4802c40e7e35/element/50de9eca-a2a1-436d-82b4-001fbb6c4ef9/text HTTP/1.1" 200 45
+2021-02-20 16:26:30,594 Finished Request
+2021-02-20 16:26:30,595 removing product from cart:Test.allTheThings() T-Shirt (Red)
+2021-02-20 16:26:30,595 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/38fa4dac-cd77-40bc-bbed-5c35598c9e84/element {"using": "css selector", "value": "button[class='btn_secondary cart_button']", "id": "38fa4dac-cd77-40bc-bbed-5c35598c9e84"}
+2021-02-20 16:26:30,603 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/38fa4dac-cd77-40bc-bbed-5c35598c9e84/element HTTP/1.1" 200 88
+2021-02-20 16:26:30,603 Finished Request
+2021-02-20 16:26:30,603 POST http://127.0.0.1:55165/session/da0f4c28f73e858cf2ef4802c40e7e35/element/fd546a24-4093-46dd-956a-896f580fce4a/click {"id": "fd546a24-4093-46dd-956a-896f580fce4a"}
+2021-02-20 16:26:30,631 http://127.0.0.1:55165 "POST /session/da0f4c28f73e858cf2ef4802c40e7e35/element/fd546a24-4093-46dd-956a-896f580fce4a/click HTTP/1.1" 200 14
+2021-02-20 16:26:30,632 Finished Request
+2021-02-20 16:26:30,632 Done!
