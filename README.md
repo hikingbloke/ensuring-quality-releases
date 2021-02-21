@@ -18,7 +18,7 @@ Following are the steps we will go through
 5. We'll create the alert for the app service using Azure Monitor.  
 
 ### Architectural Diagram
-![screenshot - Architectural Diagram](./output-files/1.architecture-diagram.png?raw=true)
+![screenshot - Architectural Diagram](./output_files/1.architecture-diagram.png?raw=true)
 
 ### Project Resources
 1. Create an [Azure Account](https://portal.azure.com) 
@@ -60,15 +60,15 @@ Following are the steps we will go through
 https://github.com/hikingbloke/ensuring-quality-releases/tree/master/terraform
 https://github.com/hikingbloke/ensuring-quality-releases/tree/master/terraform/modules
 
-![screenshot - Terraform Init](./output-files/2_terraform_init.png?raw=true)
-![screenshot - Terraform plan](./output-files/3_terraform_plan.png?raw=true)
+![screenshot - Terraform Init](./output_files/2_terraform_init.png?raw=true)
+![screenshot - Terraform plan](./output_files/3_terraform_plan.png?raw=true)
 
 - Azure pipeline execution
 https://dev.azure.com/mytechstuffbipin/DevOps/_build/results?buildId=118&view=results
 
-![screenshot - Azure Pipeline Summary](./output-files/4_azure_pipeline-execution_1.png?raw=true)
-![screenshot - Azure Pipeline Breakdown 1](./output-files/4_azure_pipeline-execution_2.png?raw=true)
-![screenshot - Azure Pipeline Breakdown 2](./output-files/4_azure_pipeline-execution_3.png?raw=true)
+![screenshot - Azure Pipeline Summary](./output_files/4_azure_pipeline-execution_1.png?raw=true)
+![screenshot - Azure Pipeline Breakdown 1](./output_files/4_azure_pipeline-execution_2.png?raw=true)
+![screenshot - Azure Pipeline Breakdown 2](./output_files/4_azure_pipeline-execution_3.png?raw=true)
 
 - Postman Collection and Environment
     - Data Validation Tests
@@ -80,57 +80,57 @@ https://dev.azure.com/mytechstuffbipin/DevOps/_build/results?buildId=118&view=re
     - Variabes
         https://github.com/hikingbloke/ensuring-quality-releases/blob/master/automatedtesting/postman/MyEnvironment.json
 
-![screenshot - Data Validation test results](./output-files/5_postman-data-validation-test-results.png?raw=true)
-![screenshot - Regression test results](./output-files/5_postman-regression-test-results.png?raw=true)
+![screenshot - Data Validation test results](./output_files/5_postman-data-validation-test-results.png?raw=true)
+![screenshot - Regression test results](./output_files/5_postman-regression-test-results.png?raw=true)
 
 - Selenium
 A zip archive of the Selenium python files. A screenshot of the successful execution of the Test Suite on a VM in Azure DevOps should contain which user logged in, which items were added to the cart, and which items were removed from the cart.
-![screenshot - Selenium test result](./output-files/6-selenium-test-results.png?raw=true)
+![screenshot - Selenium test result](./output_files/6-selenium-test-results.png?raw=true)
 
 - JMeter
-![screenshot - Jmeter DevOps test results](./output-files/7_Jmeter-devops-test-results.png?raw=true)
+![screenshot - Jmeter DevOps test results](./output_files/7_Jmeter-devops-test-results.png?raw=true)
 
 - Endurance Tests
     - Test Report
-        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output-files/7_Jmeter-endurance_test_report.7z
+        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output_files/7_Jmeter-endurance_test_report.7z
 
     - CSV output
-        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output-files/7_Jmeter-csv-edurance-test-output-results.7z
+        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output_files/7_Jmeter-csv-edurance-test-output-results.7z
 
     - PDF report
-        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output-files/7_Jmeter-endurance-test-report.pdf
+        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output_files/7_Jmeter-endurance-test-report.pdf
 
-![screenshot - Endurance Test Suite](./output-files/7_Jmeter-endurance-test-suite.png?raw=true)
-![screenshot - Endurance Test Suite Report 1](./output-files/7_Jmeter-endurance-test-report_1.png?raw=true)
-![screenshot - Endurance Test Suite Report 2](./output-files/7_Jmeter-endurance-test-report_2.png?raw=true)
+![screenshot - Endurance Test Suite](./output_files/7_Jmeter-endurance-test-suite.png?raw=true)
+![screenshot - Endurance Test Suite Report 1](./output_files/7_Jmeter-endurance-test-report_1.png?raw=true)
+![screenshot - Endurance Test Suite Report 2](./output_files/7_Jmeter-endurance-test-report_2.png?raw=true)
 
 - Stress Tests
     - Test Report
-        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output-files/7_Jmeter-stress_test_report.7z
+        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output_files/7_Jmeter-stress_test_report.7z
 
     - CSV output
-        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output-files/7_Jmeter-csv-stress-test-output-results.7z
+        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output_files/7_Jmeter-csv-stress-test-output-results.7z
 
     - PDF report
-        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output-files/7_Jmeter-stress-test-report.pdf
+        https://github.com/hikingbloke/ensuring-quality-releases/blob/master/output_files/7_Jmeter-stress-test-report.pdf
 
-![screenshot - Stress Test Suite](./output-files/7_Jmeter-stress-test-suite.png?raw=true)
-![screenshot - Stress Test Suite Report 1](./output-files/7_Jmeter-stress-test-report_1.png?raw=true)
-![screenshot - Stress Test Suite Report 2](./output-files/7_Jmeter-stress-test-report_2.png?raw=true)
+![screenshot - Stress Test Suite](./output_files/7_Jmeter-stress-test-suite.png?raw=true)
+![screenshot - Stress Test Suite Report 1](./output_files/7_Jmeter-stress-test-report_1.png?raw=true)
+![screenshot - Stress Test Suite Report 2](./output_files/7_Jmeter-stress-test-report_2.png?raw=true)
 
 
 - Azure Alert
 Screenshots of the email received when the alert is triggered, the graphs of the resource that the alert was triggered for (be sure to include timestamps for the email and the graphs), and the alert rule, which will show the resource, condition, action group, alert name, and severity. Screenshots for the resource’s metrics will correspond to the approximate time that the alert was triggered.
-![screenshot - email revceived](./output-files/8_azure-email-alert.png?raw=true)
-![screenshot - alert rules](./output-files/8_azure-alert-rules.png?raw=true)
-![screenshot - alert graphn](./output-files/8_azure-alert-graph.png?raw=true)
-![screenshot - Resource metrics](./output-files/8_web-app-metrics.png?raw=true)
+![screenshot - email revceived](./output_files/8_azure-email-alert.png?raw=true)
+![screenshot - alert rules](./output_files/8_azure-alert-rules.png?raw=true)
+![screenshot - alert graphn](./output_files/8_azure-alert-graph.png?raw=true)
+![screenshot - Resource metrics](./output_files/8_web-app-metrics.png?raw=true)
 
 - Log Analytics queries
 Screenshots of log analytics queries and result sets which will show specific output of the Azure resource. 
-![screenshot - Log Analytics query 1](./output-files/9_log-analytics-query_1.png?raw=true)
-![screenshot - Log Analytics query 2](./output-files/9_log-analytics-query_2.png?raw=true)
-![screenshot - Log Analytics query 3](./output-files/9_log-analytics-query-webapplogs.png?raw=true)
+![screenshot - Log Analytics query 1](./output_files/9_log-analytics-query_1.png?raw=true)
+![screenshot - Log Analytics query 2](./output_files/9_log-analytics-query_2.png?raw=true)
+![screenshot - Log Analytics query 3](./output_files/9_log-analytics-query-webapplogs.png?raw=true)
 
 The result set will include the output of the execution of the Selenium Test Suite.
-![screenshot - Terraform plan](./output-files/4.web-app-deployed.png?raw=true)
+![screenshot - Terraform plan](./output_files/4.web-app-deployed.png?raw=true)
