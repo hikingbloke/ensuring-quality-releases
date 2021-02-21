@@ -27,24 +27,24 @@ stages:
       displayName: 'Run terraform init'
       inputs:
         command: init
-        workingDirectory: './terraform' 
+        workingDirectory: "$(Pipeline.Workspace)/project-solution/s/terraform"
     - task: TerraformCLI@0
       displayName: 'Run terraform validate'
       inputs:
         command: validate
-        workingDirectory: $(terraformWorkingDirectory)
+        workingDirectory: "$(Pipeline.Workspace)/project-solution/s/terraform"
     - task: TerraformCLI@0
       displayName: 'Run terraform plan'
       inputs:
         command: plan -out solution.plan
-        workingDirectory: $(terraformWorkingDirectory)
+        workingDirectory: "$(Pipeline.Workspace)/project-solution/s/terraform"
         environmentServiceName: $(azureSubscription)
         commandOptions: -var location=$(azureLocation)
     - task: TerraformCLI@0
       displayName: 'Apply terraform plan'
       inputs:
         command: apply
-        workingDirectory: $(terraformWorkingDirectory)
+        workingDirectory: "$(Pipeline.Workspace)/project-solution/s/terraform"
         environmentServiceName: $(azureSubscription)
         commandOptions: -var location=$(azureLocation)
     - task: ArchiveFiles@2
