@@ -60,8 +60,26 @@ Following are the steps we will go through
 https://github.com/hikingbloke/ensuring-quality-releases/tree/master/terraform
 https://github.com/hikingbloke/ensuring-quality-releases/tree/master/terraform/modules
 
-![screenshot - Terraform Init](./output_files/2_terraform_init.png?raw=true)
-![screenshot - Terraform plan](./output_files/3_terraform_plan.png?raw=true)
+- Terraform installation logs
+![screenshot - Terraform installation](./output_files/10_terraform-install.png?raw=true)
+
+- Terraform init logs
+![screenshot - Terraform init 1](./output_files/11_terraform-init-1.png?raw=true)
+![screenshot - Terraform inti 2](./output_files/11_terraform-init-2.png?raw=true)
+
+- Terraform validate logs
+![screenshot - Terraform validate 1](./output_files/12_terraform-validate-1.png?raw=true)
+![screenshot - Terraform validate 2](./output_files/12_terraform-validate-2.png?raw=true)
+
+- Terraform plan logs
+![screenshot - Terraform plan 1](./output_files/13_terraform-plan-1.png?raw=true)
+![screenshot - Terraform plan 2](./output_files/13_terraform-plan-2.png?raw=true)
+![screenshot - Terraform plan 3](./output_files/13_terraform-plan-3.png?raw=true)
+![screenshot - Terraform plan 4](./output_files/13_terraform-plan-4.png?raw=true)
+
+- Terraform apply logs
+![screenshot - Terraform apply 1](./output_files/14_terraform-apply-1.png?raw=true)
+![screenshot - Terraform apply 2](./output_files/14_terraform-apply-2.png?raw=true)
 
 - Azure pipeline execution
 https://dev.azure.com/mytechstuffbipin/DevOps/_build/results?buildId=156&view=results
